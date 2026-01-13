@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Portfolio | Action Photography</title>
+    <meta name="description" content="Portfolio de fotografía deportiva de alto impacto.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&amp;family=Oswald:wght@500;700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <a href="#" class="logo">IBON <span class="highlight">LATORRE</span></a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image-container">
+                <!-- Image will be inserted here via CSS or IMG tag once generated -->
+                <img src="links/foto%20con%20eneko%20goia.jpg" alt="Foto-de-ibon-con-eneko-goia" class="hero-img">
+            </div>
+            <div class="hero-content">
+                <h1 data-text="IBON LATORRE">IBON LATORRE<br> <span class="highlight">PORTFOLIO WEB</span>
+                </h1>
+                <p class="subtitle">Estudiante de diseño gráfico y apasionado de la fotografía.</p>
+                <div class="cta-group">
+                    <button onclick="showSection('design')" class="cta-button">DISEÑO</button>
+                    <button onclick="showSection('photography')" class="cta-button">FOTOGRAFÍA</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bio-section reveal">
+            <div class="bio-content">
+                <p>Soy <span class="highlight">Ibon Latorre</span>, tengo <span class="highlight">20 años</span> y vivo
+                    en <span class="highlight">Donosti</span>. He estudiado <span class="highlight">diseño
+                        gráfico</span> durante 2 años en Ceinpro y continuaré mi formación. Me gusta mucho la <span
+                        class="highlight">fotografía</span> y este es un espacio donde comparto mi trabajo, disponible
+                    para su <span class="highlight">descarga gratuita</span>.</p>
+            </div>
+        </section>
+
+        <!-- Design Section -->
+        <section id="design" class="gallery-section reveal" style="display: none;">
+            <div class="gallery-header">
+                <h2 class="section-title">PORTFOLIO <span class="highlight">DISEÑO</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="empty-gallery">
+                    Próximamente / Coming Soon
+                </div>
+            </div>
+        </section>
+
+        <!-- Photography Section -->
+        <section id="photography" class="gallery-section reveal" style="display: none;">
+            <div class="gallery-header">
+                <h2 class="section-title">PORTFOLIO<span class="highlight">FOTOGRAFÍA</span></h2>
+                <div class="filters-container">
+                    <div class="date-filter">
+                        <label for="match-date">BUSCAR POR FECHA:</label>
+                        <input type="date" id="match-date" name="match-date">
+                    </div>
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-category="all">Todos</button>
+                        <button class="filter-btn" data-category="futbol">Fútbol</button>
+                        <button class="filter-btn" data-category="basket">Basket</button>
+                        <button class="filter-btn" data-category="otros">Otros</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="empty-gallery">
+                    Próximamente / Coming Soon
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section reveal">
+            <h2 class="section-title">CONTACTO <span class="highlight">PRO</span></h2>
+            <div class="contact-container">
+                <form class="contact-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">NOMBRE</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">MENSAJE</label>
+                    </div>
+                    <button type="submit" class="cta-button">ENVIAR</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://www.instagram.com/ibonlatorreg/" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-instagram">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+        <p class="copyright">© 2026 IBON LATORRE</p>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
